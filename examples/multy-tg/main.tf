@@ -67,8 +67,8 @@ module "ecs_service" {
 
   # Task Definition
   requires_compatibilities = ["EC2"]
-  cpu = 256
-  memory = 256
+  cpu                      = 256
+  memory                   = 256
   capacity_provider_strategy = {
     # On-demand instances
     ex_1 = {
@@ -151,8 +151,8 @@ module "ecs_service_2" {
 
   # Task Definition
   requires_compatibilities = ["EC2"]
-  cpu = 256
-  memory = 256
+  cpu                      = 256
+  memory                   = 256
   capacity_provider_strategy = {
     # On-demand instances
     ex_1 = {
@@ -279,10 +279,10 @@ module "alb" {
             path_pattern = {
               values = ["/tutorial/*"]
             }
-          tags = {
-            Name       = "dgs"
-            Example    = "dgs"
-          }
+            tags = {
+              Name    = "dgs"
+              Example = "dgs"
+            }
           }]
         }
 
@@ -305,8 +305,8 @@ module "alb" {
             }
           }]
           tags = {
-            Name       = "nginx"
-            Example    = "nginx"
+            Name    = "nginx"
+            Example = "nginx"
           }
         }
 
